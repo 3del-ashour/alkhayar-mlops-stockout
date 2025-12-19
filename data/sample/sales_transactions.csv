@@ -1,0 +1,5 @@
+Date,BranchID,BranchName,InvoiceNumber,ItemCode,ItemName,QuantitySold
+2024-03-25,B1,Central,INV-1,ITM1,Widget A,30
+2024-03-26,B1,Central,INV-2,ITM1,Widget A,25
+2024-03-27,B2,North,INV-3,ITM1,Widget A,20
+2024-03-28,B1,Central,INV-4,ITM2,Widget B,15

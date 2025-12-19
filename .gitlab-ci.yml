@@ -1,0 +1,32 @@
+stages:
+  - lint
+  - unit
+  - component
+  - acceptance
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+before_script:
+  - python -m pip install --upgrade pip
+  - pip install -r requirements.txt
+
+lint:
+  stage: lint
+  script:
+    - ci/scripts/run_lint.sh
+
+unit_tests:
+  stage: unit
+  script:
+    - ci/scripts/run_unit.sh
+
+component_tests:
+  stage: component
+  script:
+    - ci/scripts/run_component.sh
+
+acceptance_tests:
+  stage: acceptance
+  script:
+    - ci/scripts/run_acceptance.sh
