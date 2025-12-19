@@ -1,0 +1,14 @@
+__pycache__
+*.pyc
+.env
+.mlruns
+artifacts
+.mlflow
+/.venv
+/.envrc
+/data/*.csv
+/data/raw
+/data/processed
+/.pytest_cache
+/.prefect
+/.coverage

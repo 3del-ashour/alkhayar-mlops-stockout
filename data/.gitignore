@@ -1,0 +1,3 @@
+# Ignore real datasets
+*.csv
+!sample/*.csv

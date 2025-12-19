@@ -1,0 +1,27 @@
+version: '3.9'
+services:
+  mlflow:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.mlflow
+    ports:
+      - "5000:5000"
+    volumes:
+      - ../mlruns:/app/mlruns
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    ports:
+      - "8000:8000"
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+    depends_on:
+      - mlflow
+  prefect-agent:
+    image: prefecthq/prefect:2.16.8-python3.11
+    environment:
+      - PREFECT_API_URL=http://api.prefect.io
+    command: prefect agent start -q default
+    profiles:
+      - "" # placeholder to keep service defined

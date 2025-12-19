@@ -1,0 +1,4 @@
+BranchID,BranchName,ItemCode,ItemName,CurrentQuantity,ReservedQuantity,SafetyStockLevel,LastUpdatedAt
+B1,Central,ITM1,Widget A,120,10,50,2024-04-01
+B2,North,ITM1,Widget A,40,5,30,2024-04-01
+B1,Central,ITM2,Widget B,80,0,20,2024-04-01
